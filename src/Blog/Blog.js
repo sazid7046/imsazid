@@ -10,7 +10,7 @@ import Button from '@material-ui/core/Button';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import Footer from './../components/ui/Footer';
-import { API_URL } from '../Project/utils.js/urls';
+import { API_URL } from './../utils.js/urls';
 
 const useStyles = makeStyles(theme => ({
   blog:{

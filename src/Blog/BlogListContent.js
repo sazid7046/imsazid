@@ -10,7 +10,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Preloader from '../components/ui/Preloader';
-import { API_URL } from '../Project/utils.js/urls';
+import { API_URL } from './../utils.js/urls';
 
 
 const useStyles = makeStyles((theme) => ({

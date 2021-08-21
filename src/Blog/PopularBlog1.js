@@ -1,5 +1,5 @@
 import React from 'react';
-import { API_URL } from '../Project/utils.js/urls';
+import { API_URL } from './../utils.js/urls';
 import { PopularBlog } from './PopularBlog';
 import { useFetchBlog } from './useFetchBlog';
 

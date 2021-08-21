@@ -4,7 +4,7 @@ import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
-import { API_URL } from '../Project/utils.js/urls';
+import { API_URL } from './../utils.js/urls';
 
 const useStyles = makeStyles(theme =>({
   heading:{
