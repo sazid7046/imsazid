@@ -6,19 +6,18 @@ import Widget from './Widget';
 
 const useStyles = makeStyles((theme) => ({
   root:{
-    margin: '4rem 0',
+    marginTop: "2rem",
     [theme.breakpoints.down('sm')]:{
-      marginTop: '0rem'
+      marginTop: '-1rem',
+      // padding: '16px'
     }
   },
-  hero:{
-    width: '100%', 
-    margin: '0 auto'
+   widget:{
+    margin: "5rem 0 2rem",
+    [theme.breakpoints.down('sm')]:{
+      marginTop: '0.25rem'
+    }
   },
-  widget:{
-    width: '100%', 
-    margin: '0 auto'
-  }
 }));
 
 function Hero() {
@@ -26,14 +25,14 @@ function Hero() {
   return (
     <React.Fragment>
       <article className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item sm={8} xs={11} className={classes.hero}>
-          <HeroContent/>
+        <Grid container spacing={2}>
+          <Grid item sm={8} xs={12} className={classes.hero}>
+            <HeroContent/>
+          </Grid>
+          <Grid item sm={4} xs={12} className={classes.widget}>
+            <Widget/>
+          </Grid>
         </Grid>
-        <Grid item sm={4} xs={11} className={classes.widget}>
-          <Widget/>
-        </Grid>
-      </Grid>
       </article>
     </React.Fragment>
   )

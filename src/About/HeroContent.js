@@ -4,30 +4,31 @@ import HeroImg from './../assets/HeroImg.JPG'
 
 const useStyles = makeStyles(theme => ({
   root:{
-    marginTop: '3rem'
+    [theme.breakpoints.down('sm')]:{
+      marginTop: '1rem'
+    }
   },
   title:{
-    ontFamily: "'Rubik', sans-serif",
+    fontFamily: "'Rubik', sans-serif",
     fontWeight: 500,
     letterSpacing: '0.5px',
-    marginBottom: '2rem'
-  },
-  figure:{
-    textAlign: 'center',
-    maxWidth: '100%',
-    height: 'auto'
+    marginBottom: '1rem',
+    [theme.breakpoints.down('sm')]:{
+      marginBottom: 0
+    }
   },
   alignLeft:{
     float: 'left',
-    margin: '.5rem 1rem .5rem 0rem'
+    margin: '.5rem 1.25rem 0rem 0rem',
   },
   heroImg:{
     size: 'clamp(251px, 100vw, 251px)',
     width:"251px",
-    height:"300px"
+    [theme.breakpoints.down('sm')]:{
+      width: '100%',
+    }
   },
   paragraph:{
-    // fontSize: '18px',
     fontFamily: "'Rubik', sans-serif",
     lineHeight: '1.3',
     marginBottom: '1rem'
@@ -39,7 +40,7 @@ function HeroContent() {
 
   return (
     <section className={classes.root}>
-      <Typography variant="h2" className={classes.title}>About</Typography>
+      <Typography variant="h2" className={classes.title}>About Me</Typography>
       <div className={classes.post_content}>
         <div className={classes.blockImg}>
           <figure className={classes.alignLeft}>
@@ -61,12 +62,7 @@ function HeroContent() {
         <Typography gutterBottom variant="body1">I’m not going to sugarcoat it– learning how to code proficiently is REALLY HARD, and it does take time. But you can learn how to code, and you can learn how to learn.</Typography>
         <Typography gutterBottom variant="body1">And that’s what I want to do for you!</Typography>
         <Typography gutterBottom variant="body1">I hope that my experiences and knowledge can help others on their coding journey</Typography>
-
-
-
-
-
-~ Sazid
+        <Typography variant='body1'>~ Sazid Khan</Typography>
     </div>
       
     </section>

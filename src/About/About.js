@@ -5,13 +5,11 @@ import Hero from './Hero';
 import Footer from './../components/ui/Footer';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
+  root:{
+    [theme.breakpoints.down('sm')]:{
+      width: '96%',
+      margin: '0 auto'
+    }
   },
   container:{
       width:'100%',
@@ -23,13 +21,15 @@ export default function About() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Grid container>
-            <Grid item sm={8}className={classes.container}>
-                <Hero/>
-            </Grid>
-      </Grid>
+    <React.Fragment>
+      <div className={classes.root}>
+        <Grid container>
+              <Grid item sm={8} className={classes.container}>
+                  <Hero/>
+              </Grid>
+        </Grid>
+      </div>
       <Footer/>
-    </div>
+    </React.Fragment>
   );
 }

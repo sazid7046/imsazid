@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: '26px',
     letterSpacing: '0.5px',
     lineHeight: 1.1,
-    margin: '18px 0'
+    margin: '20px 0'
   },
   formControl:{
     width: '100%',
@@ -33,13 +33,10 @@ const useStyles = makeStyles(theme => ({
     letterSpacing: '1px',
     marginBottom: '0.75rem'
   },
-  resource:{
-    marginBottom: '3rem'
-  },
   smline:{
     height: '3px',
     backgroundColor: '#000',
-    marginTop: '5rem',
+    marginTop: '4rem',
   },
   social_link:{
     display: 'flex',
@@ -65,7 +62,6 @@ const useStyles = makeStyles(theme => ({
   heading2:{
     fontWeight: 700,
     letterSpacing: '0.6px',
-    color: '#000'
   },
   description:{
     color: '#000',
