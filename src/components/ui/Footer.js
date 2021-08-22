@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme =>({
         fontFamily: "'Audiowide', cursive",
         letterSpacing: '1px',
         [theme.breakpoints.down('sm')]: {
-            fontSize: '2rem'
+            fontSize: '1.7rem'
         }
     },
     logo:{
