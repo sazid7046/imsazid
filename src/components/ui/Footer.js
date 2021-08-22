@@ -18,16 +18,17 @@ const useStyles = makeStyles(theme =>({
         backgroundPosition: "center",
     },
     footer:{
-        width: '95%',
         margin: '3rem auto',
     },
-    logo:{
+    title:{
         fontFamily: "'Audiowide', cursive",
-        color: "#EA5A00",
         letterSpacing: '1px',
         [theme.breakpoints.down('sm')]: {
-            fontSize: '0.75em'
+            fontSize: '2rem'
         }
+    },
+    logo:{
+        color: "#EA5A00",
     },
     icon:{
         display: 'flex',
@@ -35,6 +36,11 @@ const useStyles = makeStyles(theme =>({
         margin: '1.25rem 0 2rem',
         [theme.breakpoints.down('sm')]:{
             justifyContent: 'space-around'
+        }
+    },
+    right:{
+        [theme.breakpoints.down('sm')]:{
+            marginTop: '3rem'
         }
     },
     form:{
@@ -66,32 +72,18 @@ function Footer(){
     return(
         <React.Fragment>
             <div className={classes.root}>
-                <Grid container >
+              <Grid container>
                 <Grid item sm={10} className={classes.footer}>
-                    <Grid container spacing={4} style={{display: 'flex', justifyContent: 'space-around'}}>
+                    <Grid container>
+
                         <Grid item sm={6}>
-                            <Typography gutterBottom variant="h4">iam<span className={classes.logo}>Sazid</span></Typography>
-                            <Grid container>
-                                <Grid item sm={5} xs={12} className={classes.icon}>
-                                    <GitHubIcon/>
-                                    <FacebookIcon/>
-                                    <InstagramIcon/>
-                                    <AlbumIcon/>
-                                </Grid>
-                            </Grid>
-                            <Typography variant='subtitle1'>&#169; 2021 by iamSazid, Proudly created by one &#38; only Sazid.</Typography>
+                            <FooterLeft/>
                         </Grid>
     
-                        <Grid item sm={5} xs={12}>
-                            <Typography variant="h4" gutterBottom>&#10168;iam<span className={classes.logo}>Sazid Newsletter</span></Typography>
-                            <div className={classes.form}>
-                                <label>
-                                    <Typography gutterBottom variant='h6' color='primary'>Email <span className={classes.logo}>*</span></Typography>
-                                    <input className={classes.form_input}/>
-                                </label>
-                            </div>
-                            
+                        <Grid item sm={5} xs={12} className={classes.right}>
+                            <FooterRight/> 
                         </Grid>
+
                     </Grid>
                 </Grid>
             </Grid>
@@ -100,3 +92,36 @@ function Footer(){
     );
 }
 export default Footer;
+
+export const FooterLeft = () =>{ 
+    const classes = useStyles();
+    return(
+        <React.Fragment>
+                <Typography gutterBottom variant="h4" className={classes.title}>im<span className={classes.logo}>Sazid</span></Typography>
+            <Grid container>
+                <Grid item sm={5} xs={12} className={classes.icon}>
+                    <GitHubIcon/>
+                    <FacebookIcon/>
+                    <InstagramIcon/>
+                    <AlbumIcon/>
+                </Grid>
+            </Grid>
+                <Typography variant='subtitle1' gutterBottom>&#169; 2021 by imSazid, Proudly created by one &#38; only Sazid.</Typography>
+        </React.Fragment>
+    )
+}
+
+export const FooterRight = () => {
+    const classes = useStyles();        
+    return(
+        <React.Fragment>
+                <Typography gutterBottom variant="h4" className={classes.title}>&#10168;im<span className={classes.logo}>Sazid Newsletter</span></Typography>
+            <div className={classes.form}>
+                 <label>
+                    <Typography gutterBottom variant='h6' color='primary'>Email <span className={classes.logo}>*</span></Typography>
+                    <input className={classes.form_input}/>
+                </label>
+            </div>
+        </React.Fragment>
+    )
+}

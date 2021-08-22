@@ -74,7 +74,7 @@ const BlogList = ({slug, category, title, author, date, readTime, img, desc, ava
             className={classes.media}
             component="img"
             alt="Contemplative Reptile"
-            image={`${API_URL}${img.formats.medium.url}`}
+            image={`${API_URL}${img.formats.thumbnail.url}`}
             title="image"
           />
            <Link to={`/blog/${slug}`} style={{textDecoration: 'none'}}>

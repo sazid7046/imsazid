@@ -39,6 +39,7 @@ const url = `${API_URL}/blogs`;
 function Blog() {
   const classes = useStyles();
   const {blog, loading} = useFetchBlog(url);
+  console.log(blog)
   return (
   <React.Fragment>
     <div className={classes.blog}>
