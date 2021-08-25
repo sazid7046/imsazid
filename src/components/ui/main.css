@@ -40,3 +40,6 @@ p{
   max-width: 80ch;
   color: #292929;
 }
+a{
+  text-decoration: none;
+}
