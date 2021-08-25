@@ -3,7 +3,7 @@ import { ThemeProvider } from "@material-ui/styles";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import theme from "./ui/Theme";
 import Header from "./ui/Header";
-import Home from '../Home/Home';
+import Home from '../Home/';
 import Project from '../Project/Project';
 import Blog from "../Blog/Blog";
 import About from '../About/About';
