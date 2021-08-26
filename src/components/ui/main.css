@@ -43,3 +43,6 @@ p{
 a{
   text-decoration: none;
 }
+.hero{
+  visibility: hidden;
+}

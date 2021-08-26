@@ -38,8 +38,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   logo: {
-    fontFamily: "'Audiowide', cursive",
-    // color: "#242323"
+    fontFamily: "'Audiowide', cursive"
   },
   tabContainer: {
     marginLeft: "auto"
@@ -50,8 +49,8 @@ const useStyles = makeStyles(theme => ({
     marginLeft: "25px"
   },
   drawerIcon: {
-    height: "42px",
-    width: "42px"
+    height: "40px",
+    width: "40px"
   },
   drawerIconContainer: {
     marginLeft: "auto",
@@ -61,7 +60,7 @@ const useStyles = makeStyles(theme => ({
   },
   drawer: {
     backgroundColor:"#ffffff",
-    width: "45%",
+    width: "52%",
   },
   drawerItem: {
     ...theme.typography.tab,
@@ -218,7 +217,7 @@ export default function Header(props) {
               onClick={() => setValue(0)}
               className={classes.logoContainer}
             >
-              <Typography variant="h6" >iam<span className={classes.logo}>Sazid</span></Typography>
+               <Typography variant="h5" className={classes.logo}>iamSazid</Typography> 
             </Button>
             {matches ? drawer : tabs}
           </Toolbar>
