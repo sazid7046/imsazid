@@ -210,15 +210,14 @@ export default function Header(props) {
       <ElevationScroll>
         <AppBar position="fixed" className={classes.appbar}>
           <Toolbar>
-            <Button
+            <div
               component={Link}
               to="/"
               disableRipple
               onClick={() => setValue(0)}
-              className={classes.logoContainer}
             >
                <Typography variant="h5" className={classes.logo}>iamSazid</Typography> 
-            </Button>
+            </div>
             {matches ? drawer : tabs}
           </Toolbar>
         </AppBar>
