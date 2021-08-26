@@ -9,7 +9,8 @@ const useStyle = makeStyles(theme => ({
     alignItems: 'center',
     height: '90vh',
     [theme.breakpoints.down('sm')]:{
-      height: '100vh'
+      height: '100vh',
+      marginBottom:'1rem'
     }
   },
   homeLeft:{
