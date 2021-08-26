@@ -13,8 +13,8 @@ const useStyle = makeStyles(theme => ({
     objectFit: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    width: '380px',
-    height: "380px",
+    width: '340px',
+    height: "340px",
     borderRadius: "100%",
     border: '22px solid #444',
     boxShadow: '0 0 18px 0 rgb(0 0 0 / 80%)'
