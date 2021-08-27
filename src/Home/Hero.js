@@ -7,7 +7,7 @@ const useStyle = makeStyles(theme => ({
   root:{
     display: 'flex',
     alignItems: 'center',
-    height: '90vh',
+    height: '100vh',
     [theme.breakpoints.down('sm')]:{
       height: '100vh',
       marginBottom:'1rem'
@@ -21,10 +21,7 @@ const useStyle = makeStyles(theme => ({
   },
   homeRight:{
     display: 'flex',
-    justify:'center',
-    [theme.breakpoints.down('sm')]:{
-      
-    }
+    justify:'center'
   }
 }))
 
