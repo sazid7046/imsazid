@@ -57,7 +57,7 @@ function SVG() {
                 <svg className={classes.svg} viewBox="0 0 470 470">
                     <polygon points="250,60 100,380 380,380" className={classes.triangle}/>
                     <text x="195.2858" y="190.9107"  className={classes.quotoLove}>“DO WHAT YOU LOVE</text>
-                    <text x="-90.7142" y="340.7315" className={classes.quotoText} class='quoteText'>LOVE WHAT YOU DO”</text>
+                    <text x="-90.7142" y="340.7315" className={classes.quotoText}>LOVE WHAT YOU DO”</text>
                 </svg>
             </div>
         </div>
