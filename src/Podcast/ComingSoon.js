@@ -13,10 +13,6 @@ const useStyles = makeStyles((theme) => ({
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'center',
         backgroundPosition:" top center",
-        [theme.breakpoints.down('sm')]:{
-             width: '200%',
-             height: '200vh',
-        }
 
     },
     content:{
@@ -27,17 +23,15 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center'
     },
     title:{
+        color: '#fff',
         textTransform: 'uppercase',
         letterSpacing: '1px',
         fontFamily: "'Audiowide', cursive",
-        color: '#fff'
+        [theme.breakpoints.down('sm')]:{
+          fontSize: '36px'
+        }
+        
     },
-    heading:{
-        textTransform: 'uppercase',
-        letterSpacing: '1px',
-        fontFamily: "'Audiowide', cursive",
-        color: '#fff'
-    }
   }));
 
 
@@ -82,7 +76,7 @@ function ComingSoon() {
         <div className={classes.root}>
             <div className={classes.content}>
                 <Typography variant="h2" className={classes.title}>Under</Typography>
-                <Typography variant='h2' className={classes.heading} gutterBottom>Construction</Typography>
+                <Typography variant='h2' className={classes.title} gutterBottom>Construction</Typography>
                 <CircularProgressWithLabel value={progress} color='secondary' backgroundSize='large' />
             </div> 
         </div>
