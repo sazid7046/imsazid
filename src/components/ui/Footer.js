@@ -20,6 +20,10 @@ const useStyles = makeStyles(theme =>({
     footer:{
         margin: '3rem auto',
     },
+    container:{
+        width: '95%',
+        margin: '0 auto'
+    },
     title:{
         fontFamily: "'Audiowide', cursive",
         letterSpacing: '1px',
@@ -72,7 +76,7 @@ function Footer(){
     return(
         <React.Fragment>
             <div className={classes.root}>
-              <Grid container>
+              <Grid container className={classes.container}>
                 <Grid item sm={10} className={classes.footer}>
                     <Grid container>
 
