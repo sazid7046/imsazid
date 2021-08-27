@@ -21,7 +21,10 @@ const useStyle = makeStyles(theme => ({
     [theme.breakpoints.down('sm')]:{
       width: '340px',
     height: "340px",
-    }
+    },
+    '&:hover': {
+      transform: 'scale(1.6)'
+   },
   }
 }))
 
@@ -30,8 +33,6 @@ function HomeRight() {
   let app = useRef(null)
   let images = useRef(null)
   let tl = new TimelineLite({ delay: .8});
-
-
 
   React.useEffect(() => {
     // Images Vars
