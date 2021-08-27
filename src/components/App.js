@@ -6,6 +6,7 @@ import Header from "./ui/Header";
 import Home from './../Home/Home';
 import Project from '../Project/Project';
 import Blog from "../Blog/Blog";
+import Podcast from './../Podcast/Podcast';
 import About from '../About/About';
 import BlogListContent from './../Blog/BlogListContent';
 
@@ -20,7 +21,7 @@ function App() {
           <Route exact path="/project" component={() => <div><Project/></div>}/>
           <Route exact path="/blog" component={() => <div><Blog/></div>}/>
           <Route exact path='/blog/:slug' component={() => <div><BlogListContent/></div>}/>
-          <Route exact path="/podcast" component={() => <div>home</div>}/>
+          <Route exact path="/podcast" component={() => <div><Podcast/></div>}/>
           <Route exact path="/about" component={() => <div><About/></div>}/>
         </Switch>
       </BrowserRouter>
