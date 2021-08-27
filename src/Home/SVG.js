@@ -30,21 +30,21 @@ const useStyle = makeStyles(theme => ({
           
           transformOrigin: "250px 250px"
         },
-    quotoText:{
-        fontSize: '36px',
-        letterSpacing: '1px',
-        fontFamily: "'Audiowide', cursive",
-        [theme.breakpoints.down('sm')]:{
-            fontSize: '28px',
-            transform: 'translateX(100px)'
-        }
-    },
-    quotoLove:{
+        quotoLove:{
+            fontSize: '36px',
+            letterSpacing: '1px',
+            fontFamily: "'Audiowide', cursive",
+            [theme.breakpoints.down('sm')]:{
+                fontSize: '28px'
+            }
+        },
+        quotoText:{
             fontSize: '36px',
             letterSpacing: '1px',
             fontFamily: "'Audiowide', cursive",
             [theme.breakpoints.down('sm')]:{
                 fontSize: '28px',
+                transform: 'translateX(100px)'
             }
         }
   }))
