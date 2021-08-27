@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from 'react';
 import {makeStyles} from '@material-ui/core';
-import Hero from './../assets/HeroImg.JPG';
+import Hero from './../assets/HeroImg.png';
 import {TimelineLite ,TweenMax, Power3} from 'gsap';
 
 const useStyle = makeStyles(theme => ({
@@ -9,7 +9,7 @@ const useStyle = makeStyles(theme => ({
   },
   homePhoto:{
     backgroundImage: `url(${Hero})`,
-    backgroundPosition: 'center',
+    // backgroundPosition: 'center',
     objectFit: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',

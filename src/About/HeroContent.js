@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
-import HeroImg from './../assets/HeroImg.JPG'
+import HeroImg from './../assets/HeroImg.png';
 
 const useStyles = makeStyles(theme => ({
   root:{
