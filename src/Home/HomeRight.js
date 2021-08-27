@@ -9,7 +9,7 @@ const useStyle = makeStyles(theme => ({
   },
   homePhoto:{
     backgroundImage: `url(${Hero})`,
-    // backgroundPosition: 'center',
+    backgroundColor: '#444',
     objectFit: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
