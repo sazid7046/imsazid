@@ -1,6 +1,5 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core';
-
 const useStyle = makeStyles(theme => ({
     root:{
         [theme.breakpoints.down('sm')]:{
@@ -35,8 +34,7 @@ const useStyle = makeStyles(theme => ({
         letterSpacing: '1px',
         fontFamily: "'Audiowide', cursive",
         [theme.breakpoints.down('sm')]:{
-            fontSize: '28px',
-            x:"-55.7142"
+            fontSize: '24px',
         }
     }
   }))
@@ -49,7 +47,7 @@ function SVG() {
                 <svg className={classes.svg} viewBox="0 0 470 470">
                     <polygon points="250,60 100,380 380,380" className={classes.triangle}/>
                     <text x="195.2858" y="190.9107" className={classes.quotoText}>“DO WHAT YOU LOVE</text>
-                    <text x="-90.7142" y="340.7315" className={classes.quotoText}>LOVE WHAT YOU DO”</text>
+                    <text x="-90.7142" y="340.7315" className={classes.quotoText} class='quoteText'>LOVE WHAT YOU DO”</text>
                 </svg>
             </div>
         </div>
