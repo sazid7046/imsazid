@@ -35,7 +35,7 @@ const useStyle = makeStyles(theme => ({
             letterSpacing: '1px',
             fontFamily: "'Audiowide', cursive",
             [theme.breakpoints.down('sm')]:{
-                fontSize: '28px'
+                fontSize: '26px'
             }
         },
         quotoText:{
@@ -43,8 +43,8 @@ const useStyle = makeStyles(theme => ({
             letterSpacing: '1px',
             fontFamily: "'Audiowide', cursive",
             [theme.breakpoints.down('sm')]:{
-                fontSize: '28px',
-                transform: 'translateX(100px)'
+                fontSize: '26px',
+                transform: 'translateX(120px)'
             }
         }
   }))
