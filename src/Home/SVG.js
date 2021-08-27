@@ -3,7 +3,7 @@ import {makeStyles} from '@material-ui/core';
 const useStyle = makeStyles(theme => ({
     root:{
         [theme.breakpoints.down('sm')]:{
-            marginTop: '2.5rem'
+            marginTop: '1rem'
         }
     },
     triangle_container:{
