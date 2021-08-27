@@ -14,7 +14,8 @@ const useStyle = makeStyles(theme => ({
         height: '280px',
         width: '720px',
         [theme.breakpoints.down('sm')]:{
-            width: '100%'
+            width: '100%',
+            overflow: 'hidden'
         }
     },
     triangle:{
@@ -34,9 +35,18 @@ const useStyle = makeStyles(theme => ({
         letterSpacing: '1px',
         fontFamily: "'Audiowide', cursive",
         [theme.breakpoints.down('sm')]:{
-            fontSize: '24px',
+            fontSize: '28px',
+            transform: 'translateX(100px)'
         }
-    }
+    },
+    quotoLove:{
+            fontSize: '36px',
+            letterSpacing: '1px',
+            fontFamily: "'Audiowide', cursive",
+            [theme.breakpoints.down('sm')]:{
+                fontSize: '28px',
+            }
+        }
   }))
 
 function SVG() {
@@ -46,7 +56,7 @@ function SVG() {
             <div className={classes.triangle_container}>
                 <svg className={classes.svg} viewBox="0 0 470 470">
                     <polygon points="250,60 100,380 380,380" className={classes.triangle}/>
-                    <text x="195.2858" y="190.9107" className={classes.quotoText}>“DO WHAT YOU LOVE</text>
+                    <text x="195.2858" y="190.9107"  className={classes.quotoLove}>“DO WHAT YOU LOVE</text>
                     <text x="-90.7142" y="340.7315" className={classes.quotoText} class='quoteText'>LOVE WHAT YOU DO”</text>
                 </svg>
             </div>
