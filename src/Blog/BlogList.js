@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     objectFit: 'cover',
     [theme.breakpoints.down('sm')]:{
       maxWidth: '100%',
-      height: '180'
+      height: '150'
     }
   },
   cardDescription:{
@@ -65,7 +65,6 @@ const useStyles = makeStyles(theme => ({
 
 const BlogList = ({slug, category, title, author, date, readTime, img, desc, avatar}) => {
    const classes = useStyles();
-   console.log(img)
    const readMore = false
   return (
     <React.Fragment>
