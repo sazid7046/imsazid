@@ -7,7 +7,6 @@ import Avatar from '@material-ui/core/Avatar';
 
 import {Link} from 'react-router-dom';
 import { Button } from '@material-ui/core';
-import { API_URL } from './../utils.js/urls';
 
 const useStyles = makeStyles(theme => ({
   root:{

@@ -13,16 +13,6 @@ export const useFetchBlogContent = (url) => {
         const response = await fetch(`${url}/${slug}`)
         const data = await response.json();
         if(data){
-          // const  {
-          //   title, 
-          //   author, 
-          //   date, 
-          //   readTime, 
-          //   avatar, 
-          //   img, 
-          //   description, 
-          //   content
-          // } = data
           setBlogPost(data)
         }
         else{

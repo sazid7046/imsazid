@@ -10,7 +10,7 @@ caption:{
   color: '#dadada',
 },
 title:{
-  fontFamily: "'Audiowide'"
+  fontFamily: "'Audiowide'",
 },
 description:{
   marginBottom: '1.5rem'
@@ -54,7 +54,7 @@ function HomeLeft() {
   }, [tl])
 
   return (
-    <div className={classes.root}>
+    <div>
       <div className="hero" ref={el => app = el}>
         <div ref={el => content = el}>
           <h1>
@@ -66,9 +66,9 @@ function HomeLeft() {
             </div>
           </h1>
            <Typography variant='subtitle1' color='textSecondary' className={classes.description}>
-             Full-Stack Developer with a flair for creating elegant solutions
-             in the least amount of time. Looking for growth opportunities to try new
-             technologies and grow my technical skillset in a team-based atmosphere.</Typography>
+              Full-Stack Developer with a flair for creating elegant solutions
+              in the least amount of time. Looking for growth opportunities to try new
+              technologies and grow my technical skillset in a team-based atmosphere.</Typography>
               <div className={classes.button}>
                 <Button variant='outlined' size='large'>Download CV</Button>
                 <Button variant='outlined' size='large' color='secondary'>Contact</Button>

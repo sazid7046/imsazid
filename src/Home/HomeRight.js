@@ -1,15 +1,14 @@
-import React, {useRef, useEffect} from 'react';
+import React, {useRef} from 'react';
 import {makeStyles} from '@material-ui/core';
 import Hero from './../assets/HeroImg.png';
 import {TimelineLite ,TweenMax, Power3} from 'gsap';
 
 const useStyle = makeStyles(theme => ({
   root:{
-    margin: '1rem auto'
+    margin: '1rem auto',
   },
   homePhoto:{
     backgroundImage: `url(${Hero})`,
-    backgroundColor: '#444',
     objectFit: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
@@ -18,13 +17,10 @@ const useStyle = makeStyles(theme => ({
     borderRadius: "100%",
     border: '22px solid #444',
     boxShadow: '0 0 18px 0 rgb(0 0 0 / 80%)',
-    [theme.breakpoints.down('sm')]:{
-      width: '340px',
-    height: "340px",
-    },
-    '&:hover': {
-      transform: 'scale(1.6)'
-   },
+    [theme.breakpoints.down('xs')]:{
+      width: '300px',
+      height: '300px'
+    }
   }
 }))
 
@@ -33,6 +29,8 @@ function HomeRight() {
   let app = useRef(null)
   let images = useRef(null)
   let tl = new TimelineLite({ delay: .8});
+
+
 
   React.useEffect(() => {
     // Images Vars

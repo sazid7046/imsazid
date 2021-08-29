@@ -1,12 +1,10 @@
 import React from 'react';
 import { useFetchBlog } from './useFetchBlog';
 import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
+import {Grid, Typography, Button} from '@material-ui/core';
 import Hidden from '@material-ui/core/Hidden';
 import BlogList from './BlogList';
 import PopularBlog1 from './PopularBlog1';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import Footer from './../components/ui/Footer';

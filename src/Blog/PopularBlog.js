@@ -4,7 +4,6 @@ import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
-import { API_URL } from './../utils.js/urls';
 
 const useStyles = makeStyles(theme =>({
   heading:{
@@ -33,7 +32,7 @@ export const PopularBlog = ({slug, img, title}) => {
          <Card className={classes.card} elevation={0}>
           <CardMedia
             className={classes.media}
-            image={`${img.[0].url}`}
+            image={`${img[0].url}`}
             title="Contemplative Reptile"
             />
             <div className={classes.desc}>

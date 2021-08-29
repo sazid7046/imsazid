@@ -6,7 +6,6 @@ import { makeStyles } from "@material-ui/styles";
 import Typography from '@material-ui/core/Typography';
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
@@ -213,7 +212,6 @@ export default function Header(props) {
             <div
               component={Link}
               to="/"
-              disableRipple
               onClick={() => setValue(0)}
             >
                <Typography variant="h5" className={classes.logo}>iamSazid</Typography> 

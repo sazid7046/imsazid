@@ -77,7 +77,7 @@ function ComingSoon() {
             <div className={classes.content}>
                 <Typography variant="h2" className={classes.title}>Under</Typography>
                 <Typography variant='h2' className={classes.title} gutterBottom>Construction</Typography>
-                <CircularProgressWithLabel value={progress} color='secondary' backgroundSize='large' />
+                <CircularProgressWithLabel value={progress} color='secondary'/>
             </div> 
         </div>
     )

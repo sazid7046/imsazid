@@ -1,14 +1,9 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import BlogContent from './BlogContent';
 import Grid from '@material-ui/core/Grid';
 import { useFetchBlogContent } from './useFetchBlogContent';
 import Footer from '../components/ui/Footer';
-
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Preloader from '../components/ui/Preloader';
 import { API_URL } from './../utils.js/urls';
 
@@ -19,34 +14,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     height: '80vh'
-  },
-  social:{
-    marginTop: '4rem',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    height: '40vh',
-    [theme.breakpoints.down('sm')]:{
-      flexDirection: 'row',
-      height: 0,
-      marginTop: '1rem'
-    }
-  },
-  fb_links:{
-    transform: 'scale(1.7)',
-    color: '#4267B2'
-  },
-  tw_links:{
-    transform: 'scale(1.7)',
-    color: '#1DA1F2'
-  },
-  lkdn_links:{
-    transform: 'scale(1.7)',
-    color:  '#0077b5'
-  },
-  title:{
-    marginBottom: '3rem'
   }
 }));
 
@@ -67,18 +34,11 @@ function BlogListContent() {
   }
   return (
     <React.Fragment>
-     <div style={{ padding: 16 }}>
-      <Grid container spacing={4}>
-        <Grid item xs={12} sm={3} className={classes.social}>
-          <FacebookIcon className={classes.fb_links}/>
-          <TwitterIcon className={classes.tw_links}/>
-          <LinkedInIcon className={classes.lkdn_links}/>
-        </Grid>
-        <Grid item xs={12} sm={7}>
+      <Grid container justify='center'>
+        <Grid item sm={6} xs={12}>
           <BlogContent {...blogPost}/>
         </Grid>
       </Grid>
-     </div>
      <Footer/>
     </React.Fragment>
   )

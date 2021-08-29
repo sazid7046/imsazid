@@ -7,10 +7,11 @@ const useStyle = makeStyles(theme => ({
   root:{
     display: 'flex',
     alignItems: 'center',
-    height: '100vh',
+    height: '90vh',
     [theme.breakpoints.down('sm')]:{
-      height: '100vh',
-      marginBottom:'1rem'
+      height: '95vh',
+      marginTop: '3rem',
+      marginBottom: '5rem'
     }
   },
   homeLeft:{
@@ -21,7 +22,10 @@ const useStyle = makeStyles(theme => ({
   },
   homeRight:{
     display: 'flex',
-    justify:'center'
+    justify:'center',
+    [theme.breakpoints.down('sm')]:{
+      
+    }
   }
 }))
 
@@ -33,7 +37,7 @@ function Hero() {
         <Grid item sm={4} xs={12} className={classes.homeLeft}>
           <HomeLeft/>
         </Grid>
-        <Grid item sm={4} xs={12}className={classes.homeRight}>
+        <Grid item sm={4} xs={12} className={classes.homeRight}>
           <HomeRight/>
         </Grid>
       </Grid>
