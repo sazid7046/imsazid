@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     objectFit: 'cover',
     [theme.breakpoints.down('sm')]:{
       maxWidth: '100%',
-      height: '150'
+      height: '180'
     }
   },
   cardDescription:{
