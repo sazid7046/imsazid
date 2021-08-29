@@ -23,14 +23,15 @@ const useStyles = makeStyles(theme => ({
   },
   heroImg:{
     size: 'clamp(251px, 100vw, 251px)',
-    width:"251px",
+    width: '251px',
     [theme.breakpoints.down('sm')]:{
       width: '100%',
+      height: '320px',
     }
   },
   paragraph:{
     fontFamily: "'Rubik', sans-serif",
-    lineHeight: '1.3',
+    lineHeight: '1.5',
     marginBottom: '1rem'
   }
 }))
@@ -40,7 +41,7 @@ function HeroContent() {
 
   return (
     <section className={classes.root}>
-      <Typography variant="h2" className={classes.title}>About Me</Typography>
+      <Typography variant="h3" className={classes.title}>About Me</Typography>
       <div className={classes.post_content}>
         <div className={classes.blockImg}>
           <figure className={classes.alignLeft}>

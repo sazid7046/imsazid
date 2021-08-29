@@ -15,7 +15,7 @@ const useStyle = makeStyles(theme => ({
         width: '720px',
         [theme.breakpoints.down('sm')]:{
             width: '100%',
-            overflow: 'hidden'
+            overflow: 'hidden',
         }
     },
     triangle:{

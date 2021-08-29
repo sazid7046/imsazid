@@ -7,7 +7,7 @@ import Footer from './../components/ui/Footer';
 const useStyles = makeStyles((theme) => ({
   root:{
     [theme.breakpoints.down('sm')]:{
-      width: '96%',
+      width: '93%',
       margin: '0 auto'
     }
   },
