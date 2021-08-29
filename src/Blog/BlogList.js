@@ -65,6 +65,7 @@ const useStyles = makeStyles(theme => ({
 
 const BlogList = ({slug, category, title, author, date, readTime, img, desc, avatar}) => {
    const classes = useStyles();
+   console.log(avatar.url)
    const readMore = false
   return (
     <React.Fragment>
@@ -73,8 +74,8 @@ const BlogList = ({slug, category, title, author, date, readTime, img, desc, ava
           <CardMedia
             className={classes.media}
             component="img"
-            alt="Contemplative Reptile"
-            image={`${API_URL}${img.formats.thumbnail.url}`}
+            alt={title}
+            image={`${API_URL}${img[0].formats.thumbnail.url}`}
             title="image"
           />
            <Link to={`/blog/${slug}`} style={{textDecoration: 'none'}}>
@@ -83,7 +84,7 @@ const BlogList = ({slug, category, title, author, date, readTime, img, desc, ava
               <Typography variant="h6" gutterBottom color="textPrimary">{title}</Typography>
               <Typography variant="body2">{readMore?desc:`${desc.substring(0, 180)}...`}</Typography>
               <div className={classes.avatar}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                <Avatar alt="Remy Sharp" src={avatar.url} />
                 <div className={classes.author}>
 
                   <div>
