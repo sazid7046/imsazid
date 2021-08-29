@@ -65,7 +65,7 @@ const useStyles = makeStyles(theme => ({
 
 const BlogList = ({slug, category, title, author, date, readTime, img, desc, avatar}) => {
    const classes = useStyles();
-   console.log(avatar.url)
+   console.log(img)
    const readMore = false
   return (
     <React.Fragment>
@@ -75,7 +75,7 @@ const BlogList = ({slug, category, title, author, date, readTime, img, desc, ava
             className={classes.media}
             component="img"
             alt={title}
-            image={`${API_URL}${img[0].formats.thumbnail.url}`}
+            image={`${img[0].url}`}
             title="image"
           />
            <Link to={`/blog/${slug}`} style={{textDecoration: 'none'}}>
