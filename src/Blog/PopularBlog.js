@@ -33,7 +33,7 @@ export const PopularBlog = ({slug, img, title}) => {
          <Card className={classes.card} elevation={0}>
           <CardMedia
             className={classes.media}
-            image={`${API_URL}${img.formats.thumbnail.url}`}
+            image={`${img.[0].url}`}
             title="Contemplative Reptile"
             />
             <div className={classes.desc}>
