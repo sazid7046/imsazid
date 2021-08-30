@@ -4,7 +4,7 @@ import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
-
+import Hidden from '@material-ui/core/Hidden';
 import {Link} from 'react-router-dom';
 import { Button } from '@material-ui/core';
 
@@ -26,10 +26,8 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     maxWidth: 400,
     marginRight: '1rem',
-    objectFit: 'cover',
     [theme.breakpoints.down('sm')]:{
       maxWidth: '100%',
-      height: '180'
     }
   },
   cardDescription:{
@@ -81,20 +79,21 @@ const BlogList = ({slug, category, title, author, date, readTime, img, desc, ava
               <Button variant="contained" disabled style={{margin: '0.5rem 0'}}>#Machine Learning</Button>
               <Typography variant="h6" gutterBottom color="textPrimary">{title}</Typography>
               <Typography variant="body2">{readMore?desc:`${desc.substring(0, 180)}...`}</Typography>
-              <div className={classes.avatar}>
-                <Avatar alt="Remy Sharp" src={avatar.url} />
-                <div className={classes.author}>
-
-                  <div>
-                    <Typography variant="subtitle1" color='textSecondary'>Author</Typography>
-                    <Typography variant="subtitle2" color='textPrimary'>Sazid Khan</Typography>
+                <Hidden smUp>
+                  <div className={classes.avatar}>
+                    <Avatar alt="Remy Sharp" src={avatar.url} />
+                    <div className={classes.author}>
+                      <div>
+                        <Typography variant="subtitle1" color='textSecondary'>Author</Typography>
+                        <Typography variant="subtitle2" color='textPrimary'>Sazid Khan</Typography>
+                      </div>
+                      
+                      <div className={classes.date}>
+                        <Typography color='secondary' variant="subtitle2">{date}</Typography>
+                      </div>
+                    </div>
                   </div>
-                  
-                  <div className={classes.date}>
-                    <Typography color='secondary' variant="subtitle2">{date}</Typography>
-                  </div>
-                </div>
-              </div>
+                </Hidden>
             </div>
            </Link>
         </div>

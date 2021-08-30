@@ -1,12 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useFetchBlog } from './useFetchBlog';
 import { makeStyles } from '@material-ui/core/styles';
 import {Grid, Typography, Button} from '@material-ui/core';
 import Hidden from '@material-ui/core/Hidden';
 import BlogList from './BlogList';
+import CustomPagination from './CustomPagination';
 import PopularBlog1 from './PopularBlog1';
-import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import Footer from './../components/ui/Footer';
 import { API_URL } from './../utils.js/urls';
 
@@ -37,6 +36,17 @@ const url = `${API_URL}/blogs`;
 function Blog() {
   const classes = useStyles();
   const {blog, loading} = useFetchBlog(url);
+
+  const [showPerPage, setShowPerPage] = useState(1);
+  const [pagination, setPagination] = useState({
+    start: 0,
+    end: showPerPage,
+  }); 
+
+  const onPaginationChange = (start, end) => {
+    setPagination({ start: start, end: end });
+  };
+
   return (
   <React.Fragment>
     <div className={classes.blog}>
@@ -46,7 +56,7 @@ function Blog() {
           </Hidden>
         
         <Grid item xs={12} sm={12} md={6} className={classes.card}>
-            {blog.map((bloglist) => {
+            {blog.slice(pagination.start, pagination.end).map((bloglist) => {
             return (
               <>
                 {loading ? 'loading...' : <BlogList key={bloglist.id} {...bloglist} />}
@@ -55,14 +65,10 @@ function Blog() {
             }
           )}
 
-          <Grid item container sm={12} justify='space-between'>
-            <Grid item sm={6}>
-              <Button variant="outlined" color="secondary" size='large'  startIcon={<ArrowLeftIcon>Newer</ArrowLeftIcon>}>Newer</Button>
-            </Grid>
-            <Grid item sm={6} style={{textAlign: 'right'}}>
-              <Button variant="contained" color="secondary" size='large' endIcon={<ArrowRightIcon>Older</ArrowRightIcon>}>Older</Button>
-            </Grid>
-          </Grid>
+           <CustomPagination 
+            showPerPage={showPerPage}
+            onPaginationChange={onPaginationChange}
+            total={blog.length}/>
 
         </Grid>
         <Grid item xs={12} md={4} className={classes.sticky}>
