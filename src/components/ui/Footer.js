@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme =>({
         backgroundPosition: "center",
     },
     footer:{
-        margin: '3rem auto',
+        margin: '3rem auto 1rem',
     },
     container:{
         width: '95%',
