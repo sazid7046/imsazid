@@ -5,7 +5,7 @@ import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 
 const CustomPagination = ({total, showPerPage, onPaginationChange}) => {
-    const [counter, setCounter] = useState(2);
+    const [counter, setCounter] = useState(1);
 
     useEffect(() => {
         const value = showPerPage * counter;

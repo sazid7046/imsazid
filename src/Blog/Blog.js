@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   },
   sticky:{
     position: 'relative',
-    transform: 'translate(0, 16%)'
+    transform: 'translate(0, 20%)'
   }
 }));
 
@@ -37,7 +37,7 @@ function Blog() {
   const classes = useStyles();
   const {blog, loading} = useFetchBlog(url);
 
-  const [showPerPage, setShowPerPage] = useState(1);
+  const [showPerPage, setShowPerPage] = useState(2);
   const [pagination, setPagination] = useState({
     start: 0,
     end: showPerPage,
