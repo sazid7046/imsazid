@@ -11,7 +11,7 @@ import { Button } from '@material-ui/core';
 const useStyles = makeStyles(theme => ({
   root:{
     marginBottom: '2.25rem',
-    height: '14rem',
+    height: '13rem',
     [theme.breakpoints.down('sm')]:{
       height: 'auto'
     }
@@ -77,7 +77,7 @@ const BlogList = ({slug, category, title, author, date, readTime, img, desc, ava
            <Link to={`/blog/${slug}`} style={{textDecoration: 'none'}}>
             <div className={classes.cardDescription}>
               <Button variant="contained" disabled style={{margin: '0.5rem 0'}}>#Machine Learning</Button>
-              <Typography variant="h6" gutterBottom color="textPrimary">{title}</Typography>
+              <Typography variant="h6" gutterBottom color="textPrimary" style={{lineHeight: '1.3'}}>{title}</Typography>
               <Typography variant="body2">{readMore?desc:`${desc.substring(0, 180)}...`}</Typography>
                 <Hidden smUp>
                   <div className={classes.avatar}>
