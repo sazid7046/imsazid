@@ -1,29 +1,37 @@
-import React from "react";
+import React, {Suspense, lazy} from "react";
 import { ThemeProvider } from "@material-ui/styles";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import theme from "./ui/Theme";
-import Header from "./ui/Header";
-import Home from './../Home/Home';
-import Project from '../Project/Project';
-import Blog from "../Blog/Blog";
-import Podcast from './../Podcast/Podcast';
-import About from '../About/About';
-import BlogListContent from './../Blog/BlogListContent';
+import Preloader from './ui/Preloader';
+import CssBaseline from '@material-ui/core/CssBaseline';
+
+const Header = lazy(() => import("./ui/Header"));
+const Home = lazy(() => import('./../Home/Home'));
+const Project = lazy(() => import('../Project/Project'));
+const Blog = lazy(() => import("../Blog/Blog")) ;
+const Podcast = lazy(() => import('./../Podcast/Podcast'));
+const About = lazy(() => import('../About/About'));
+const BlogListContent = lazy(() => import('./../Blog/BlogListContent'));
+const Footer = lazy(() => import('./ui/Footer'));
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Header/>
-        <Switch>
-          <Route exact path="/" component={() => <div><Home/></div>}/>
-          <Route exact path="/home" component={() => <div><Home/></div>}/>
-          <Route exact path="/project" component={() => <div><Project/></div>}/>
-          <Route exact path="/blog" component={() => <div><Blog/></div>}/>
-          <Route exact path='/blog/:slug' component={() => <div><BlogListContent/></div>}/>
-          <Route exact path="/podcast" component={() => <div><Podcast/></div>}/>
-          <Route exact path="/about" component={() => <div><About/></div>}/>
-        </Switch>
+        <Suspense fallback={<div><Preloader/></div>}>
+          <CssBaseline/>
+          <Header/>
+            <Switch>
+                <Route exact path="/" component={() => <div><Home/></div>}/>
+                <Route exact path="/home" component={() => <div><Home/></div>}/>
+                <Route exact path="/project" component={() => <div><Project/></div>}/>
+                <Route exact path="/blog" component={() => <div><Blog/></div>}/>
+                <Route exact path='/blog/:slug' component={() => <div><BlogListContent/></div>}/>
+                <Route exact path="/podcast" component={() => <div><Podcast/></div>}/>
+                <Route exact path="/about" component={() => <div><About/></div>}/>
+            </Switch>
+            <Footer />
+        </Suspense>
       </BrowserRouter>
     </ThemeProvider>
   );

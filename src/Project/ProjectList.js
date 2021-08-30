@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import ProjectCard from './ProjectCard';
 import { Typography } from '@material-ui/core';
+import  './../components/ui/main.css';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -18,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
   card:{
     marginBottom: '2rem',
+    textDecoration: 'none',
     [theme.breakpoints.down('sm')]:{
       marginBottom: '1rem'
     }
@@ -63,24 +65,24 @@ function ProjectList() {
             <Typography variant='body1' color="textSecondary" gutterBottom>And This is what I did in the past 4 years of my
                 Engineering and also doing a blog on the latest tech.</Typography>
               <div className={classes.card}>
-                <a href="https://sazid7046.github.io/Covid-19-Tracker/" rel='noreferrer' target="_blank">
+                <a href="https://sazid7046.github.io/Covid-19-Tracker/" rel='noreferrer' target="_blank" style={{textDecoration: 'none'}}>
                   <ProjectCard img={card.image} title={card.title} description={card.description} tool={card.tools}/>
                 </a>
               </div>
             <div className={classes.card}>
-              <a href="https://github.com/sazid7046/sunny-side-agency" rel='noreferrer' target="_blank">
+              <a href="https://github.com/sazid7046/sunny-side-agency" rel='noreferrer' target="_blank" style={{textDecoration: 'none'}}>
                 <ProjectCard img={card3.image} title={card3.title} description={card3.description} tool={card3.tools}/>
               </a>
             </div>
           </Grid>
           <Grid item xs={12} sm={4}>
           <div className={classes.card}>
-            <a href="https://github.com/sazid7046/canvo.io" rel='noreferrer' target="_blank">
+            <a href="https://github.com/sazid7046/canvo.io" rel='noreferrer' target="_blank" style={{textDecoration: 'none'}}>
               <ProjectCard img={card2.image} title={card2.title} description={card2.description} tool={card2.tools}/>
             </a>
           </div>
           <div className={classes.card}>
-             <a href="https://sazid7046.github.io/Covid-19-Tracker/" rel='noreferrer' target="_blank">
+             <a href="https://sazid7046.github.io/Covid-19-Tracker/" rel='noreferrer' target="_blank" style={{textDecoration: 'none'}}>
               <ProjectCard img={card4.image} title={card4.title} description={card4.description} tool={card4.tools}/>
             </a> 
           </div>

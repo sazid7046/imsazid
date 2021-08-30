@@ -6,7 +6,6 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import AlbumIcon from '@material-ui/icons/Album';
-
 import Contact__bg2 from '../../assets/contact_bg2.jpg';
 
 const useStyles = makeStyles(theme =>({

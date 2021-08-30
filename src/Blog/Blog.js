@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import { useFetchBlog } from './useFetchBlog';
 import { makeStyles } from '@material-ui/core/styles';
-import {Grid, Typography, Button} from '@material-ui/core';
+import {Grid, Typography} from '@material-ui/core';
 import Hidden from '@material-ui/core/Hidden';
 import BlogList from './BlogList';
 import CustomPagination from './CustomPagination';
 import PopularBlog1 from './PopularBlog1';
-import Footer from './../components/ui/Footer';
 import { API_URL } from './../utils.js/urls';
+import Preloader from './../components/ui/Preloader'
 
 const useStyles = makeStyles(theme => ({
   blog:{
@@ -24,11 +24,11 @@ const useStyles = makeStyles(theme => ({
   },
   rightBlog:{
     position: 'sticky',
-    top: '-4rem'
+    top: '-7rem'
   },
   sticky:{
     position: 'relative',
-    transform: 'translate(0, 20%)'
+    transform: 'translate(0, 16%)'
   }
 }));
 
@@ -59,7 +59,7 @@ function Blog() {
             {blog.slice(pagination.start, pagination.end).map((bloglist) => {
             return (
               <>
-                {loading ? 'loading...' : <BlogList key={bloglist.id} {...bloglist} />}
+                {loading ? <Preloader/> : <BlogList key={bloglist.id} {...bloglist} />}
               </>
               )
             }
@@ -81,7 +81,6 @@ function Blog() {
         </Grid>
       </Grid>
       </div>
-    <Footer/>
   </React.Fragment>
   )
 }
