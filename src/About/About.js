@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Hero from './Hero';
-import Footer from './../components/ui/Footer';
 
 const useStyles = makeStyles((theme) => ({
   root:{
@@ -29,7 +28,6 @@ export default function About() {
               </Grid>
         </Grid>
       </div>
-      <Footer/>
     </React.Fragment>
   );
 }
