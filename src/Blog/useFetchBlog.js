@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import Preloader from './../components/ui/Preloader';
 
 export const useFetchBlog = (url) => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [blog, setBlog] = useState([]);
 
   const getBlog = async () =>{
