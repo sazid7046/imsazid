@@ -15,7 +15,10 @@ const BlogContent = ({title, content}) => {
   return (
     <section className={classes.root}>
        <Typography variant='h1' gutterBottom>{title}</Typography>
-          <ReactMarkDown children={content}/>
+       <div className='markdown'>
+         <ReactMarkDown children={content}/>
+       </div>
+          
     </section>
   )
 }

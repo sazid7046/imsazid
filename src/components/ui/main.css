@@ -43,6 +43,13 @@ p{
 a{
   text-decoration: none;
 }
+ol,ul{
+  margin-top: 1rem;
+}
+li{
+  font-size: 18px;
+  line-height:  1.6;
+}
 .hero{
   visibility: hidden;
 }
