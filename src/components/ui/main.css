@@ -53,3 +53,9 @@ li{
 .hero{
   visibility: hidden;
 }
+
+@media (max-width: 720px) {
+  ul,ol{
+    margin-left: 1rem;
+  }
+}
