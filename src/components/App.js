@@ -6,13 +6,13 @@ import Preloader from './ui/Preloader';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Header from './ui/Header';
+import Footer from './ui/Footer';
 const Home = lazy(() => import('./../Home/Home'));
 const Project = lazy(() => import('../Project/Project'));
 const Blog = lazy(() => import("../Blog/Blog")) ;
 const Podcast = lazy(() => import('./../Podcast/Podcast'));
 const About = lazy(() => import('../About/About'));
 const BlogListContent = lazy(() => import('./../Blog/BlogListContent'));
-const Footer = lazy(() => import('./ui/Footer'));
 
 function App() {
   return (
@@ -30,8 +30,8 @@ function App() {
                 <Route exact path="/podcast" component={() => <div><Podcast/></div>}/>
                 <Route exact path="/about" component={() => <div><About/></div>}/>
             </Switch>
-            <Footer />
         </Suspense>
+        <Footer />
       </BrowserRouter>
     </ThemeProvider>
   );

@@ -3,11 +3,11 @@ import { useFetchBlog } from './useFetchBlog';
 import { makeStyles } from '@material-ui/core/styles';
 import {Grid, Typography} from '@material-ui/core';
 import Hidden from '@material-ui/core/Hidden';
+import BlogList from './BlogList';
+import CustomPagination from './CustomPagination';
 import PopularBlog1 from './PopularBlog1';
 import { API_URL } from './../utils.js/urls';
-import Preloader from './../components/ui/Preloader';
-import CustomPagination from './CustomPagination';
-import BlogList from './BlogList';
+import Preloader from './../components/ui/Preloader'
 
 const useStyles = makeStyles(theme => ({
   blog:{
@@ -47,6 +47,13 @@ function Blog() {
     setPagination({ start: start, end: end });
   };
 
+  if(loading){
+    return <h1><Preloader/></h1>
+  }
+  if(!blog){
+    return <h1>No Blog To Display</h1>
+  }
+
   return (
   <React.Fragment>
     <div className={classes.blog}>
@@ -59,15 +66,17 @@ function Blog() {
             {blog.slice(pagination.start, pagination.end).map((bloglist) => {
             return (
               <>
-                {loading ? <Preloader/> : <BlogList key={bloglist.id} {...bloglist} />}
+                {loading ? 'loading' : <BlogList key={bloglist.id} {...bloglist} />}
               </>
               )
             }
           )}
+
            <CustomPagination 
             showPerPage={showPerPage}
             onPaginationChange={onPaginationChange}
             total={blog.length}/>
+
         </Grid>
         <Grid item xs={12} md={4} className={classes.sticky}>
           <Hidden smDown> 

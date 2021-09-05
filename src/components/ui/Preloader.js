@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/styles';
 
 const useStyle = makeStyles(theme => ({
   preloader:{
-    height: '90vh',
+    height: '95vh',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
