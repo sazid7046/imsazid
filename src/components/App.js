@@ -7,12 +7,12 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Header from './ui/Header';
 import Footer from './ui/Footer';
+import Blog from '../Blog/Blog';
+import Podcast from './../Podcast/Podcast';
+import BlogListContent from "../Blog/BlogListContent";
 const Home = lazy(() => import('./../Home/Home'));
-const Project = lazy(() => import('../Project/Project'));
-const Blog = lazy(() => import("../Blog/Blog")) ;
-const Podcast = lazy(() => import('./../Podcast/Podcast'));
+const Project = lazy(() => import('../Project/Project'));;
 const About = lazy(() => import('../About/About'));
-const BlogListContent = lazy(() => import('./../Blog/BlogListContent'));
 
 function App() {
   return (

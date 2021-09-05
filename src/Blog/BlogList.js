@@ -60,7 +60,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const BlogList = ({slug, category, title, author, date, readTime, img, desc, avatar}) => {
+const BlogList = ({slug, categories, title, author, date, readTime, img, desc, avatar}) => {
    const classes = useStyles();
    const readMore = false
   return (
@@ -76,7 +76,7 @@ const BlogList = ({slug, category, title, author, date, readTime, img, desc, ava
           />
            <Link to={`/blog/${slug}`} style={{textDecoration: 'none'}}>
             <div className={classes.cardDescription}>
-              <Button variant="contained" disabled style={{margin: '0.5rem 0'}}>#Machine Learning</Button>
+              <Button variant="contained" disabled style={{margin: '0.5rem 0'}}>#{categories}</Button>
               <Typography variant="h6" gutterBottom color='textPrimary' style={{lineHeight: '1.3'}}>{title}</Typography>
               <Typography variant="body2" color='textPrimary'>{readMore?desc:`${desc.substring(0, 180)}...`}</Typography>
                 <Hidden smUp>

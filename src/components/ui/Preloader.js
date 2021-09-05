@@ -8,6 +8,9 @@ const useStyle = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    [theme.breakpoints.down('sm')]:{
+      height: '90vh'
+    }
   }
 }))
 
