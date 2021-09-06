@@ -8,6 +8,7 @@ import Hidden from '@material-ui/core/Hidden';
 import {Link} from 'react-router-dom';
 import { Button } from '@material-ui/core';
 
+
 const useStyles = makeStyles(theme => ({
   root:{
     marginBottom: '2.25rem',
@@ -67,13 +68,11 @@ const BlogList = ({slug, categories, title, author, date, readTime, img, desc, a
     <React.Fragment>
       <Card className={classes.root} elevation={1}>
         <div className={classes.cardActionArea}>
-          <CardMedia
+           <CardMedia
             className={classes.media}
             component="img"
             alt={title}
-            image={`${img[0].url}`}
-            title="image"
-          />
+            src={`${img[0].url}`}/>
            <Link to={`/blog/${slug}`} style={{textDecoration: 'none'}}>
             <div className={classes.cardDescription}>
               <Button variant="contained" disabled style={{margin: '0.5rem 0'}}>#{categories}</Button>

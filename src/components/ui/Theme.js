@@ -27,7 +27,6 @@ export default createMuiTheme({
       fontSize: '36px',
       fontWeight: 400,
       color: '#000000',
-      // wordBreak: 'break-word'
     },    
     h6:{
       fontFamily: "'Rubik', sans-serif",
@@ -38,7 +37,6 @@ export default createMuiTheme({
       color: '#515151',
       fontWeight: 400,
     },
-
 
   }
 });
