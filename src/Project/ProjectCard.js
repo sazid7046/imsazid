@@ -6,7 +6,6 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const useStyles = makeStyles((theme) => ({
   media:{
@@ -14,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function ProjectCard(props) {
+function ProjectCard({image, title, description, tools}) {
   const classes = useStyles();
   return (
     <div>
@@ -22,18 +21,18 @@ function ProjectCard(props) {
         <CardActionArea>
            <CardMedia
             className={classes.media}
-            image={props.img}
-            title={props.title}
+            image={image}
+            title={title}
             />
           <CardContent>
           <Typography variant="body1" component="p" gutterBottom>
-              {props.title}
+              {title}
             </Typography>
             <Typography variant="body2" component="p" gutterBottom>
-              {props.description}
+              {description}
             </Typography>
             <Typography variant="subtitle1" color="textSecondary" component="p" align='center'>
-              {props.tool}
+              {tools}
             </Typography>
           </CardContent>
           </CardActionArea>

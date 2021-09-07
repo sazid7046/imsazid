@@ -66,24 +66,24 @@ function ProjectList() {
                 Engineering and also doing a blog on the latest tech.</Typography>
               <div className={classes.card}>
                 <a href="https://sazid7046.github.io/Covid-19-Tracker/" rel='noreferrer' target="_blank" style={{textDecoration: 'none'}}>
-                  <ProjectCard img={card[0].image} title={card[0].title} description={card[0].description} tool={card[0].tools}/>
+                  <ProjectCard {...card[0]}/>
                 </a>
               </div>
             <div className={classes.card}>
               <a href="https://github.com/sazid7046/sunny-side-agency" rel='noreferrer' target="_blank" style={{textDecoration: 'none'}}>
-                <ProjectCard img={card[2].image} title={card[2].title} description={card[2].description} tool={card[2].tools}/>
+                <ProjectCard {...card[2]}/>
               </a>
             </div>
           </Grid>
           <Grid item xs={12} sm={4}>
           <div className={classes.card}>
             <a href="https://github.com/sazid7046/canvo.io" rel='noreferrer' target="_blank" style={{textDecoration: 'none'}}>
-              <ProjectCard img={card[1].image} title={card[1].title} description={card[1].description} tool={card[1].tools}/>
+              <ProjectCard {...card[1]}/>
             </a>
           </div>
           <div className={classes.card}>
              <a href="https://sazid7046.github.io/Covid-19-Tracker/" rel='noreferrer' target="_blank" style={{textDecoration: 'none'}}>
-              <ProjectCard img={card[3].image} title={card[3].title} description={card[3].description} tool={card[3].tools}/>
+              <ProjectCard {...card[3]}/>
             </a> 
           </div>
           </Grid>
