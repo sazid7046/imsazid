@@ -58,8 +58,8 @@ function ProjectList() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <div style={{padding: '0 12px'}}>
-        <Grid container spacing={3} className={classes.container}>
+      <div style={{padding: '0 16px'}}>
+        <Grid container spacing={4}  className={classes.container}>
           <Grid item xs={12} sm={4}>
             <Typography variant='h2' className={classes.title}>Portfolio</Typography>
             <Typography variant='body1' color="textSecondary" gutterBottom>And This is what I did in the past 4 years of my

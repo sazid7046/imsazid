@@ -31,7 +31,10 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#00A088',
     color: '#ffffff',
     letterSpacing: '1px',
-    marginBottom: '0.75rem'
+    marginBottom: '0.75rem',
+    '&:hover':{
+      backgroundColor: '#4cbcab'
+    }
   },
   smline:{
     height: '3px',
@@ -71,21 +74,26 @@ const useStyles = makeStyles(theme => ({
 }))
 function Widget() {
   const classes = useStyles();
-  const [name, setName] = React.useState('youname@email.com');
+  const [email, setEmail] = React.useState('');
+  const [name, setName] = React.useState([])
 
-  const handleChange = (event) => {
-    setName(event.target.value);
-  };
+  const handleChange = () => {
+    const newEmail = {email}
+    setName((name) => {
+      return [...name, newEmail]
+    })
+  }
+  console.log(name)
   return (
     <section className={classes.root}>
       <div className={classes.newsletter}>
         <Typography className={classes.title}>Want to learn web devlopment?</Typography>
-        <Typography variant='subtitle1'>Sign up to get emails about new posts and other info.     Unsubscribe anytime.</Typography>
+        <Typography variant='subtitle1'>Sign up to get emails about new posts and other info. Unsubscribe anytime.</Typography>
         <form noValidate autoComplete="off" className={classes.form}>
           <FormControl variant="outlined" className={classes.formControl}>
-            <OutlinedInput value={name} onChange={handleChange} label="Name" />
+            <OutlinedInput name='email' value={email} placeholder='youname@email.com' onChange={(e) => setEmail(e.target.value)} label="Name" />
           </FormControl>
-          <Button variant="outlined" size="large" className={classes.button}>GET UPDATES</Button>
+          <Button variant="outlined" size="large" className={classes.button} onClick={() => handleChange()}>GET UPDATES</Button>
         </form>
         <Typography variant='body1' component='p'>Learn more at our @privacy-policy.</Typography>
       </div>

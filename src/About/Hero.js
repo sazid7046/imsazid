@@ -9,14 +9,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "2rem",
     [theme.breakpoints.down('sm')]:{
       marginTop: '-1rem',
-      // padding: '16px'
     }
   },
    widget:{
-    margin: "5rem 0 2rem",
-    [theme.breakpoints.down('sm')]:{
-      marginTop: '0.25rem'
-    }
+    margin: "3.5rem 0 2rem",
   },
 }));
 
@@ -25,7 +21,7 @@ function Hero() {
   return (
     <React.Fragment>
       <article className={classes.root}>
-        <Grid container spacing={2}>
+        <Grid container spacing={4}>
           <Grid item sm={8} xs={12} className={classes.hero}>
             <HeroContent/>
           </Grid>

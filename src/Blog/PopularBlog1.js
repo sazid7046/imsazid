@@ -7,20 +7,23 @@ const url = `${API_URL}/blogs`;
 
 function PopularBlog1() {
   const {blog} = useFetchBlog(url);
-  function shuffleBlog(array) {
-    let i = array.length - 1;
+
+  function shuffleBlog(blog) {
+    let i = blog.length - 1;
     for (; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      const temp = array[i];
-      array[i] = array[j];
-      array[j] = temp;
+      const temp = blog[i];
+      blog[i] = blog[j];
+      blog[j] = temp;
     }
-    return array;
+    return blog;
   }
-  const shuffledPosts = shuffleBlog(blog); 
+  React.useEffect(()=> {
+    shuffleBlog(blog)
+  }, [blog])
   return (
    <React.Fragment>
-      {shuffledPosts.map(popularBlog => {
+      {blog.map(popularBlog => {
         return <PopularBlog {...popularBlog}/>
       })}
    </React.Fragment>

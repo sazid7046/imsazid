@@ -9,7 +9,7 @@ const useStyle = makeStyles(theme => ({
     alignItems: 'center',
     justifyContent: 'center',
     [theme.breakpoints.down('sm')]:{
-      height: '90vh'
+      height: 'calc(90vh-4rem)'
     }
   }
 }))

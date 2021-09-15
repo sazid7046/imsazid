@@ -24,9 +24,8 @@ const useStyles = makeStyles(theme => ({
     }
   },
   media:{
-    width: "100%",
-    maxWidth: 400,
-    marginRight: '1rem',
+    maxWidth: "50%",
+    marginRight: theme.spacing(2),
     [theme.breakpoints.down('sm')]:{
       maxWidth: '100%',
     }
@@ -68,9 +67,9 @@ const BlogList = ({slug, categories, title, author, date, readTime, img, desc, a
     <React.Fragment>
       <Card className={classes.root} elevation={1}>
         <div className={classes.cardActionArea}>
-           <CardMedia
+           <img
             className={classes.media}
-            component="img"
+            // component="img"
             alt={title}
             src={`${img[0].url}`}/>
            <Link to={`/blog/${slug}`} style={{textDecoration: 'none'}}>

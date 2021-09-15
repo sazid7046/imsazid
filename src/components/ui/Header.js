@@ -30,6 +30,16 @@ function ElevationScroll(props) {
 }
 
 const useStyles = makeStyles(theme => ({
+  toolbar:{
+    width: '80%',
+    margin: '0 auto',
+    [theme.breakpoints.down('sm')]:{
+      width: '100%'
+    },
+    [theme.breakpoints.down('md')]:{
+      width: '100%'
+    }
+  },
   toolbarMargin: {
     ...theme.mixins.toolbar,
     [theme.breakpoints.down("xs")]: {
@@ -45,7 +55,7 @@ const useStyles = makeStyles(theme => ({
   tab: {
     ...theme.typography.tab,
     minWidth: 10,
-    marginLeft: "25px"
+    marginLeft: "30px"
   },
   drawerIcon: {
     height: "40px",
@@ -64,7 +74,6 @@ const useStyles = makeStyles(theme => ({
   drawerItem: {
     ...theme.typography.tab,
     opacity: 0.7,
-    fontFamily: "'Roboto', sans-serif"
   },
   drawerItemSelected: {
     "& .MuiListItemText-root": {
@@ -109,8 +118,7 @@ export default function Header(props) {
       mouseOver: event => handleClick(event)
     },
     { name: "Blog", link: "/blog", activeIndex: 2 },
-    { name: "Podcast", link: "/podcast", activeIndex: 3 },
-    { name: "About Me", link: "/about", activeIndex: 4 }
+    { name: "About Me", link: "/about", activeIndex: 3 }
   ];
 
   useEffect(() => {
@@ -126,9 +134,6 @@ export default function Header(props) {
               setSelectedIndex(route.selectedIndex);
             }
           }
-          break;
-        case "/blog/learn-basic-html":
-          setValue(2);
           break;
         default:
           break;
@@ -208,7 +213,7 @@ export default function Header(props) {
     <React.Fragment>
       <ElevationScroll>
         <AppBar position="fixed" className={classes.appbar}>
-          <Toolbar>
+          <Toolbar className={classes.toolbar}>
             <div
               component={Link}
               to="/"

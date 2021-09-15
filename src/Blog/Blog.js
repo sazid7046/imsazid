@@ -11,7 +11,7 @@ import Preloader from './../components/ui/Preloader'
 
 const useStyles = makeStyles(theme => ({
   blog:{
-    [theme.breakpoints.down('md')]:{
+    [theme.breakpoints.down('sm')]:{
       width: '95%',
       margin: '1rem auto'
     }
@@ -57,12 +57,8 @@ function Blog() {
   return (
   <React.Fragment>
     <div className={classes.blog}>
-        <Grid container>
-          <Hidden smDown>
-            <Grid item xs={12} md={2}></Grid>
-          </Hidden>
-        
-        <Grid item xs={12} sm={12} md={6} className={classes.card}>
+        <Grid container justify='flex-end'>
+        <Grid item xs={12} md={6} className={classes.card}>
             {blog.slice(pagination.start, pagination.end).map((bloglist) => {
             return (
               <>
@@ -76,9 +72,9 @@ function Blog() {
             showPerPage={showPerPage}
             onPaginationChange={onPaginationChange}
             total={blog.length}/>
-
         </Grid>
-        <Grid item xs={12} md={4} className={classes.sticky}>
+
+        <Grid item sm={4} xs={12} className={classes.sticky} justify='flex-end'>
           <Hidden smDown> 
               <div className={classes.rightBlog}>
                 <Typography variant="h6" gutterBottom align='center'>Most Popular</Typography>

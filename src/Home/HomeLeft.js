@@ -80,30 +80,3 @@ function HomeLeft() {
 }
 
 export default HomeLeft;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    {/* <Typography variant='subtitle1' color='textSecondary' className={classes.caption}>Full-Stack Developer</Typography>
-      <Typography variant="h3" gutterBottom className={classes.title}>Sazid Khan</Typography>
-      <Typography variant='subtitle1' color='textSecondary' className={classes.description}>
-      Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis, risus non condimentum gravida, odio mauris ullamcorper felis, ut venenatis purus ex eu mi. Quisque imperdiet lacinia urna, a placerat sapien pretium
-      </Typography>
-      <div className={classes.button}>
-        <Button variant='outlined' size='large'>Download CV</Button>
-        <Button variant='outlined' size='large' color='secondary'>Contact</Button>
-      </div>
-      */}

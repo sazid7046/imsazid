@@ -18,9 +18,9 @@ export default createMuiTheme({
   },
   typography: {
     tab: {
-      fontFamily: " 'Poppins', sans-serif",
-      fontWeight: 400,
+      fontWeight: 500,
       fontSize: "1rem",
+      letterSpacing: '1px',
       color: "#242323",
     },
     h1:{
