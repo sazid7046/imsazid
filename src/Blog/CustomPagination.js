@@ -10,7 +10,7 @@ const CustomPagination = ({total, showPerPage, onPaginationChange}) => {
     useEffect(() => {
         const value = showPerPage * counter;
         onPaginationChange(value - showPerPage, value);
-      }, []);
+      }, [counter]);
 
       const onButtonClick = (type) => {
       if (type === "prev") {
