@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme =>({
     width: '100%'
   }
 }));
-export const PopularBlog = ({slug, img, title}) => {
+export const PopularBlog = ({slug, img, author, title}) => {
   const classes = useStyles();
   return (
       <React.Fragment>
@@ -33,11 +33,11 @@ export const PopularBlog = ({slug, img, title}) => {
           <CardMedia
             className={classes.media}
             image={`${img[0].url}`}
-            title="Contemplative Reptile"
+            title={title}
             />
             <div className={classes.desc}>
               <Typography variant="subtitle2" component="h2">{title}</Typography>
-              <Typography variant="subtitle2" color="textSecondary">Bartłomiej Franków</Typography>
+              <Typography variant="subtitle2" color="textSecondary">{author}</Typography>
             </div>
         </Card>
         </Link>

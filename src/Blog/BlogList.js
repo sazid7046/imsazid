@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   media:{
-    maxWidth: "50%",
+    maxWidth: "48%",
     marginRight: theme.spacing(2),
     [theme.breakpoints.down('sm')]:{
       maxWidth: '100%',
@@ -60,7 +60,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const BlogList = ({slug, categories, title, author, date, readTime, img, desc, avatar}) => {
+const BlogList = ({slug, categories, title, author, date, img, desc, avatar}) => {
    const classes = useStyles();
    const readMore = false
   return (
@@ -76,14 +76,14 @@ const BlogList = ({slug, categories, title, author, date, readTime, img, desc, a
             <div className={classes.cardDescription}>
               <Button variant="contained" disabled style={{margin: '0.5rem 0'}}>#{categories}</Button>
               <Typography variant="h6" gutterBottom color='textPrimary' style={{lineHeight: '1.3'}}>{title}</Typography>
-              <Typography variant="body2" color='textPrimary'>{readMore?desc:`${desc.substring(0, 180)}...`}</Typography>
+              <Typography variant="body2" color='textPrimary'>{readMore?desc:`${desc.substring(0, 200)}...`}</Typography>
                 <Hidden smUp>
                   <div className={classes.avatar}>
                     <Avatar alt="Remy Sharp" src={avatar.url} />
                     <div className={classes.author}>
                       <div>
                         <Typography variant="subtitle1" color='textSecondary'>Author</Typography>
-                        <Typography variant="subtitle2" color='textPrimary'>Sazid Khan</Typography>
+                        <Typography variant="subtitle2" color='textPrimary'>{author}</Typography>
                       </div>
                       
                       <div className={classes.date}>
