@@ -37,7 +37,7 @@ function Blog() {
   const classes = useStyles();
   const {blog, loading} = useFetchBlog(url);
 
-  const [showPerPage, setShowPerPage] = useState(2);
+  const showPerPage = 2;
   const [pagination, setPagination] = useState({
     start: 0,
     end: showPerPage,
@@ -59,10 +59,10 @@ function Blog() {
     <div className={classes.blog}>
         <Grid container justify='flex-end'>
         <Grid item xs={12} md={6} className={classes.card}>
-            {blog.slice(pagination.start, pagination.end).map((bloglist) => {
+            {blog.slice(pagination.start, pagination.end).map((bloglist, index) => {
             return (
               <>
-                {loading ? 'loading' : <BlogList key={bloglist.id} {...bloglist} />}
+                {loading ? 'loading' : <BlogList key={index} {...bloglist} />}
               </>
               )
             }
@@ -74,14 +74,15 @@ function Blog() {
             total={blog.length}/>
         </Grid>
 
-        <Grid item sm={4} xs={12} className={classes.sticky} justify='flex-end'>
-          <Hidden smDown> 
-              <div className={classes.rightBlog}>
-                <Typography variant="h6" gutterBottom align='center'>Most Popular</Typography>
-                <PopularBlog1/>
-              </div>
-          </Hidden>
-        </Grid>
+        <Grid item sm={4} xs={12} className={classes.sticky}>
+            <Hidden smDown> 
+                <div className={classes.rightBlog}>
+                  <Typography variant="h6" gutterBottom align='center'>Most Popular</Typography>
+                  <PopularBlog1/>
+                </div>
+            </Hidden>
+          </Grid>
+       
       </Grid>
       </div>
   </React.Fragment>

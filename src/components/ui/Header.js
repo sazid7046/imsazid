@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect, useMemo} from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
@@ -120,7 +120,7 @@ export default function Header(props) {
     { name: "Blog", link: "/blog", activeIndex: 2 },
     { name: "About Me", link: "/about", activeIndex: 3 }
   ];
-
+  
   useEffect(() => {
     [...routes].forEach(route => {
       switch (window.location.pathname) {

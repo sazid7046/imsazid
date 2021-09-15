@@ -23,8 +23,8 @@ function PopularBlog1() {
   }, [blog])
   return (
    <React.Fragment>
-      {blog.map(popularBlog => {
-        return <PopularBlog {...popularBlog}/>
+      {blog.map((popularBlog, index) => {
+        return <PopularBlog key={index} {...popularBlog}/>
       })}
    </React.Fragment>
   )

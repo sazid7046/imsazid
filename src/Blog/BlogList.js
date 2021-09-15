@@ -1,7 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Hidden from '@material-ui/core/Hidden';
@@ -62,14 +61,13 @@ const useStyles = makeStyles(theme => ({
 
 const BlogList = ({slug, categories, title, author, date, img, desc, avatar}) => {
    const classes = useStyles();
-   const readMore = false
+   const readMore = false;
   return (
     <React.Fragment>
       <Card className={classes.root} elevation={1}>
         <div className={classes.cardActionArea}>
            <img
             className={classes.media}
-            // component="img"
             alt={title}
             src={`${img[0].url}`}/>
            <Link to={`/blog/${slug}`} style={{textDecoration: 'none'}}>

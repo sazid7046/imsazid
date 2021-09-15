@@ -82,8 +82,8 @@ function Widget() {
     setName((name) => {
       return [...name, newEmail]
     })
+    setEmail('')
   }
-  console.log(name)
   return (
     <section className={classes.root}>
       <div className={classes.newsletter}>
